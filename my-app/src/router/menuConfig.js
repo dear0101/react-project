@@ -1,5 +1,18 @@
+import Home from "../pages/home";
+import Buttons from "../pages/ui/Buttons";
+import Form from "../pages/form";
+import Table from "../pages/table";
+import Rich from "../pages/rich";
+import City from "../pages/city";
+import Order from "../pages/order";
+import User from "../pages/user";
+import BikeMap from "../pages/bikemap";
+import Charts from "../pages/charts";
+import Permission from "../pages/permission";
+
 const menuList = [{
         title: '首页',
+        component: Home,
         key: '/home'
     },
     {
@@ -7,6 +20,7 @@ const menuList = [{
         key: '/ui',
         children: [{
                 title: '按钮',
+                component: Buttons,
                 key: '/ui/buttons',
             },
             {
@@ -41,6 +55,7 @@ const menuList = [{
     },
     {
         title: '表单',
+        component: Form,
         key: '/form',
         children: [{
                 title: '登录',
@@ -54,6 +69,7 @@ const menuList = [{
     },
     {
         title: '表格',
+        component: Table,
         key: '/table',
         children: [{
                 title: '基础表格',
@@ -67,14 +83,17 @@ const menuList = [{
     },
     {
         title: '富文本',
+        component: Rich,
         key: '/rich'
     },
     {
         title: '城市管理',
+        component: City,
         key: '/city'
     },
     {
         title: '订单管理',
+        component: Order,
         key: '/order',
         btnList: [{
                 title: '订单详情',
@@ -88,14 +107,17 @@ const menuList = [{
     },
     {
         title: '员工管理',
+        component: User,
         key: '/user'
     },
     {
         title: '车辆地图',
+        component: BikeMap,
         key: '/bikeMap'
     },
     {
-        title: '图标',
+        title: '图表',
+        component: Charts,
         key: '/charts',
         children: [{
                 title: '柱形图',
@@ -113,6 +135,7 @@ const menuList = [{
     },
     {
         title: '权限设置',
+        component: Permission,
         key: '/permission'
     },
 ];
