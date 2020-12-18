@@ -1,0 +1,44 @@
+@import '../../style/default.scss';
+.header {
+    position: relative;
+    background-color: $colorM;
+    .header-top {
+        height: 60px;
+        line-height: 60px;
+        padding: 0 20px;
+        text-align: right;
+        a {
+            margin-left: 40px;
+        }
+    }
+    .breadcrumb {
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        border-Top: 2px solid #f9c000;
+        .breadcrumb-title {
+            position: relative;
+            text-align: center;
+            font-size: 18px;
+            &:after {
+                position: absolute;
+                content: '';
+                z-index: 2;
+                left: 50%;
+                transform: translate(-50%);
+                top: 90%;
+                display: block;
+                border-top: 15px solid $colorM;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+            }
+        }
+        .breadcrumb-weather {
+            text-align: right;
+            .date {}
+            .weather-detail {
+                margin-left: 40px;
+            }
+        }
+    }
+}

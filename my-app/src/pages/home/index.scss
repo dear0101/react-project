@@ -1,0 +1,11 @@
+@import '../../style/default.scss';
+.home-swap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: $colorJ;
+    width: 100%;
+    height: calc(100vh - 240px);
+    background-color: $colorM;
+}
