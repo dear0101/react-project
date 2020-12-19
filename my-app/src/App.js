@@ -6,6 +6,8 @@ import {BrowserRouter as Router,Route} from "react-router-dom";
 import NavLeft from './components/NavLeft';
 import Home from './pages/home';
 import Buttons from './pages/ui/Buttons';
+import Order from './pages/order';
+
 import menuConfig from './router/menuConfig';
 function App (){
         return (
@@ -19,6 +21,7 @@ function App (){
                     <Row className="content">
                         <Route  path='/ui/buttons' component={Buttons}/>
                         <Route  path='/home' exact component={Home}/>
+                        <Route  path='/order' exact component={Order}/>
                     </Row>  
                     <Footer/>
                 </Col>

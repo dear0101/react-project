@@ -1,0 +1,26 @@
+.card-swap,
+.card-table {
+    width: 100%;
+}
+
+.ant-form {
+    display: flex;
+    .ant-form-item {
+        width: 200px;
+        margin-right: 100px;
+        margin-bottom: 0;
+        button {
+            margin-right: 50px;
+        }
+    }
+}
+
+.ant-form-item-control-input-content {
+    display: flex;
+}
+
+.card-button {
+    button {
+        margin-right: 50px;
+    }
+}
