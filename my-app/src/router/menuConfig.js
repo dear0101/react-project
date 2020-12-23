@@ -118,7 +118,7 @@ const menuList = [{
         key: '/user'
     },
     {
-        title: '车辆地图',
+        title: '事件代办',
         component: BikeMap,
         key: '/bikeMap'
     },

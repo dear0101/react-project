@@ -1,8 +1,15 @@
 import React from 'react';
-
+import './index.scss'
+import TodoInput from '../../components/Todo-input'
+import TodoList from '../../components/Todo-list'
 function BikeMap(){
     return (
-        <>BikeMap</>
+        <>
+            <div className='swarp'>
+                <TodoInput/>
+                <TodoList/>
+            </div>
+        </>
     )
 }
 

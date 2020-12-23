@@ -1,0 +1,12 @@
+.card-todo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .todo-title {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .card-input {
+        width: 700px;
+    }
+}
