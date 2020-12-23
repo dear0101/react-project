@@ -20,35 +20,42 @@ const menuList = [{
         key: '/ui',
         children: [{
                 title: '按钮',
-                component: Buttons,
+                components: Buttons,
                 key: '/ui/buttons',
             },
             {
                 title: '弹框',
+                components: Buttons,
                 key: '/ui/modals',
             },
             {
                 title: 'Loading',
+                component: Buttons,
                 key: '/ui/loadings',
             },
             {
                 title: '通知提醒',
+                component: Buttons,
                 key: '/ui/notification',
             },
             {
                 title: '全局Message',
+                component: Buttons,
                 key: '/ui/messages',
             },
             {
                 title: 'Tab页签',
+                component: Buttons,
                 key: '/ui/tabs',
             },
             {
                 title: '图片画廊',
+                component: Buttons,
                 key: '/ui/gallery',
             },
             {
                 title: '轮播图',
+                component: Buttons,
                 key: '/ui/carousel',
             }
         ]

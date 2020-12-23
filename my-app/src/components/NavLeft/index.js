@@ -11,7 +11,6 @@ function NavLeft() {
         console.log(11);
     }
     return (
-        <Router>
         <div className="logo">
                 <h1>DEAR DJL</h1>               
                 <Menu onClick={handleClick}  theme="dark"  mode="vertical">
@@ -39,7 +38,6 @@ function NavLeft() {
                 </Menu>     
                 
         </div>
-        </Router>
     )
 }
 

@@ -1,15 +1,16 @@
 import React,{useState,useEffect} from 'react'
-import {Card,Button,Table,Form,Select,Modal,message} from 'antd'
+import {Card,Button,Table,Form,Select,Modal,message,DatePicker, Space} from 'antd'
 import './index.scss';
 import Tables from '../../components/Table';
+const { RangePicker } = DatePicker;
 const { Option } = Select;
 function Order(){
     return (
-        <div  className="card-swap">
+        <div  className="swarp">
             <Card>
             <Form name="control-hooks" >
                 <Form.Item
-                    name="gender"
+                    name="City"
                     label="城市"
                 >
                     <Select
@@ -17,51 +18,31 @@ function Order(){
                     // onChange={onGenderChange}
                     allowClear
                     >
-                    <Option value="male">male</Option>
-                    <Option value="female">female</Option>
-                    <Option value="other">other</Option>
+                    <Option value="GZ">广州</Option>
+                    <Option value="SZ">深圳</Option>
+                    <Option value="SH">上海</Option>
                     </Select>
                 </Form.Item>
+                <div className="data-picker">
+                    <span>订单时间： </span>
+                    <Space direction="vertical" size={12}>
+                        <RangePicker
+                        showTime={{ format: 'HH:mm' }}
+                        format="YYYY-MM-DD HH:mm"
+                        />
+                    </Space>
+                </div>
                 <Form.Item
-                    name="gender"
-                    label="用车模式"
+                    name="order"
+                    label="订单状态"
                 >
                     <Select
                     placeholder="全部"
                     // onChange={onGenderChange}
                     allowClear
                     >
-                    <Option value="male">male</Option>
-                    <Option value="female">female</Option>
-                    <Option value="other">other</Option>
-                    </Select>
-                </Form.Item>
-                <Form.Item
-                    name="gender"
-                    label="运营模式"
-                >
-                    <Select
-                    placeholder="全部"
-                    // onChange={onGenderChange}
-                    allowClear
-                    >
-                    <Option value="male">male</Option>
-                    <Option value="female">female</Option>
-                    <Option value="other">other</Option>
-                    </Select>
-                </Form.Item>
-                <Form.Item
-                    name="gender"
-                    label="加盟商授权状态"
-                >
-                    <Select
-                    placeholder="全部"
-                    // onChange={onGenderChange}
-                    allowClear
-                    >
-                    <Option value="male">male</Option>
-                    <Option value="female">female</Option>
-                    <Option value="other">other</Option>
+                    <Option value="line">正在使用</Option>
+                    <Option value="timeOut">已结束</Option>
                     </Select>
                 </Form.Item>
                 <Form.Item >

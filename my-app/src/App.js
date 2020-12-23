@@ -4,11 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import {BrowserRouter as Router,Route} from "react-router-dom";
 import NavLeft from './components/NavLeft';
-import Home from './pages/home';
-import Buttons from './pages/ui/Buttons';
-import Order from './pages/order';
-
-import menuConfig from './router/menuConfig';
+import Routes from './router/route';
 function App (){
         return (
             <Router>
@@ -19,9 +15,7 @@ function App (){
                 <Col span='21' className="main">
                    <Header/>
                     <Row className="content">
-                        <Route  path='/ui/buttons' component={Buttons}/>
-                        <Route  path='/home' exact component={Home}/>
-                        <Route  path='/order' exact component={Order}/>
+                            <Routes/>
                     </Row>  
                     <Footer/>
                 </Col>
