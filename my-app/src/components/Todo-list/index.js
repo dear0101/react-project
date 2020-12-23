@@ -1,23 +1,21 @@
-import React from 'react'
+import React ,{useState,useEffect}from 'react'
 import './index.scss'
 import { List,Card,Checkbox,Button } from 'antd';
 import {CheckSquareOutlined ,FormOutlined,ClearOutlined } from '@ant-design/icons';
-function TodoList(){
-    const data = [
-        'Racing car sprays burning fuel into crowd.',
-    
-      ];
+function TodoList(props){
+   
+    const {todolist,onCheckChange} = props;
         return(
             <div className="todo">
             <Card>
             <List
                 size="large"
                 bordered
-                dataSource={data}
+                dataSource={todolist}
                 renderItem={item => <List.Item>{
                     <div className="list-item">
-                            <Checkbox ></Checkbox>
-                            <p className="item-content">{item}</p>
+                            <Checkbox onChange={()=>onCheckChange(item.id)} checked={item.isCompleted}></Checkbox>
+                            <p className="item-content" style={{textDecoration: item.isCompleted?"line-through":"none" }}>{item.content}</p>
                             <div className="btn-operator">
                                 <Button type="primary"  icon={<CheckSquareOutlined />}>查看</Button>
                                 <Button danger  icon={<FormOutlined />}>编辑</Button>
