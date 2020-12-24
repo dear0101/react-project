@@ -1,9 +1,9 @@
 import React ,{useState,useEffect}from 'react'
 import './index.scss'
 import { List,Card,Checkbox,Button } from 'antd';
+import {getStorages} from '../../utils/storage';
 import {CheckSquareOutlined ,FormOutlined,ClearOutlined } from '@ant-design/icons';
 function TodoList(props){
-   
     const {todolist,onCheckChange} = props;
         return(
             <div className="todo">

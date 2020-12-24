@@ -21,7 +21,7 @@ function TodoInput(props){
                 <div className="card-todo">
                     <span className="todo-title">TODOLISTS</span>
                     <div className="card-input">
-                        <Input placeholder="Add Your TodoItem"  value={inputVal} onChange={onInputChange}/>
+                        <Input placeholder="Add Your TodoItem"  value={inputVal} onChange={onInputChange} onPressEnter={submitValue}/>
                     </div>
                     <Button type="primary" icon={<EditOutlined />}  onClick={submitValue}>新增</Button>
                 </div>
