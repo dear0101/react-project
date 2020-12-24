@@ -1,5 +1,12 @@
 .todo {
     margin-top: 30px;
+    .pagination {
+        margin-top: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0;
+    }
     .list-item {
         display: flex;
         align-items: center;

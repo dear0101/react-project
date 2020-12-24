@@ -2,11 +2,13 @@ import React,{useState,useEffect} from 'react';
 import "./index.scss"
 import { Card ,Input,Button } from 'antd';
 import {EditOutlined } from '@ant-design/icons';
+import myMessage from '../../utils/message';
 function TodoInput(props){
     const {addItem}=props;
     const [inputVal,SetinputVal]=useState('');
     const submitValue=()=>{
         if(inputVal.trim().length===0){
+            myMessage.warning('输入内容不能为空!',2)
             return;
         }
         addItem(inputVal)

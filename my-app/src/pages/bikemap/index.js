@@ -6,20 +6,26 @@ import {setStorages,getStorages} from '../../utils/storage';
 
 
 function BikeMap(){
-    const [todolist,setTodolist]=useState([]);
+    let [todolist,setTodolist]=useState([]); 
+
     useEffect(()=>{
-       let  todoData=JSON.parse(getStorages()) ;
-       setTodolist(todoData);
-    },[])
-    const addItem=(value)=>{
-        let data={
+        const todoData=JSON.parse(getStorages())
+        setTodolist(todoData);
+    },[]) 
+
+    useEffect(()=>{
+        setStorages(todolist);   
+    },[todolist])
+
+    const addItem=useCallback((value)=>{
+        let data = {
             id:new Date().getTime(),
             content:value,
             isCompleted:false,
         }
-        setTodolist(()=>[data,...todolist])   
-        setStorages(data)
-    }
+        setTodolist(()=>[data,...todolist])
+    })
+    
     const onCheckChange=useCallback((id)=>{
         // todolist.forEach((item)=>{
         //        if(id===item.id){
