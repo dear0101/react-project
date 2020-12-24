@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Button } from 'antd';
+import { Table } from 'antd';
 import DataList from '../../pages/order/orderList';
 
 function Tables(){

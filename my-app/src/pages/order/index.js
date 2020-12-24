@@ -1,5 +1,5 @@
-import React,{useState,useEffect} from 'react'
-import {Card,Button,Table,Form,Select,Modal,message,DatePicker, Space} from 'antd'
+import React from 'react'
+import {Card,Button,Form,Select,DatePicker, Space} from 'antd'
 import './index.scss';
 import Tables from '../../components/Table';
 const { RangePicker } = DatePicker;

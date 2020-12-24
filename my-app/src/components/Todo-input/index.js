@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import "./index.scss"
 import { Card ,Input,Button } from 'antd';
 import {EditOutlined } from '@ant-design/icons';

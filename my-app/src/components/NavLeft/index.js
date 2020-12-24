@@ -1,19 +1,16 @@
 import React from 'react';
 import { Menu } from 'antd';
 import MenuConfig from '../../router/menuConfig';
-import {BrowserRouter as Router,Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import './index.scss';
 
 const SubMenu = Menu.SubMenu;
 function NavLeft() {
     
-    const handleClick=()=>{
-        console.log(11);
-    }
     return (
         <div className="logo">
                 <h1>DEAR DJL</h1>               
-                <Menu onClick={handleClick}  theme="dark"  mode="vertical">
+                <Menu   theme="dark"  mode="vertical">
                 {
                         MenuConfig.map((item,index)=>{
                             return (

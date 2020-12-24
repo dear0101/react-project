@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card,Button,Table,Form,Select,Modal,message} from 'antd'
+import {Card,Button,Form,Select} from 'antd'
 import './index.scss';
 
 const { Option } = Select;

@@ -24,8 +24,8 @@ function BikeMap(){
             isCompleted:false,
         }
         setTodolist(()=>[data,...todolist])
-    })
-    
+    },[])
+
     const onCheckChange=useCallback((id)=>{
         // todolist.forEach((item)=>{
         //        if(id===item.id){

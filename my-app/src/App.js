@@ -2,7 +2,7 @@ import React from 'react';
 import {Row,Col} from 'antd';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import {BrowserRouter as Router,Route} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import NavLeft from './components/NavLeft';
 import Routes from './router/route';
 function App (){
