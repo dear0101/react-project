@@ -3,7 +3,7 @@ import {message} from 'antd'
  let myMessage ={
     
     success:(content,timeOut)=> {
-        return    message.warning(content,timeOut);
+        return    message.success(content,timeOut);
     },
     warning:(content,timeOut)=>{
         return  message.warning(content,timeOut);

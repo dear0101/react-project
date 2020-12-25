@@ -1,6 +1,6 @@
 export function getStorages (){
     return localStorage.getItem('todolist')||'[]';
 }
-export function setStorages (todo){
-    localStorage.setItem('todolist',JSON.stringify(todo));
+export function setStorages (todolist){
+    localStorage.setItem('todolist',JSON.stringify(todolist));
 }

@@ -2,42 +2,57 @@ import React ,{useState,useEffect,useCallback}from 'react';
 import './index.scss';
 import TodoInput from '../../components/Todo-input';
 import TodoList from '../../components/Todo-list';
-import {setStorages,getStorages} from '../../utils/storage';
-
-
 function BikeMap(){
-    let [todolist,setTodolist]=useState([]); 
-
+    const [todolist,setTodolist]=useState([]); 
     useEffect(()=>{
-        const todoData=JSON.parse(getStorages())
-        setTodolist(todoData);
+        setTodolist(JSON.parse(localStorage.getItem('todolist')||'[]'));
     },[]) 
-
-    useEffect(()=>{
-        setStorages(todolist);   
-    },[todolist])
-
+    //添加
     const addItem=useCallback((value)=>{
-        let data = {
+        const dataItem = {
             id:new Date().getTime(),
             content:value,
             isCompleted:false,
         }
-        setTodolist(()=>[data,...todolist])
+        setTodolist((todolist)=>[dataItem,...todolist])
     },[])
 
-    const onCheckChange=useCallback((id)=>{
-        // todolist.forEach((item)=>{
-        //        if(id===item.id){
-        //         item.isCompleted=!item.isCompleted
-        //     }
-        //     })
+    //删除
+    const toRemoveItem=useCallback((item)=>{
+        console.log(item)
+        setTodolist((todolist)=>todolist.filter(items=>items.id!==item.id))
     },[])
+    
+    //修改
+    const toEditItem=useCallback((newItem,id)=>{
+        console.log(id)
+        setTodolist((todolist)=>
+        todolist.map(items=>{
+        if(items.id===id){
+            items=newItem
+        }
+        return items;
+        }))
+    },[])
+    //是否完成
+    const toCompleted=useCallback((id)=>{
+        setTodolist((todolist)=>
+        todolist.map(item=>{
+        if(item.id===id){
+            item.isCompleted=!item.isCompleted;
+        }
+        return item;
+    }))
+    },[])
+    useEffect(()=>{
+        localStorage.setItem('todolist',JSON.stringify(todolist)); 
+    },[todolist])
+
     return (
         <>
             <div className='swarp'>
                 <TodoInput  addItem={addItem}/>
-                <TodoList onCheckChange={onCheckChange} todolist={todolist}/>
+                <TodoList  todolist={todolist} toRemoveItem={toRemoveItem} toCompleted={toCompleted} toEditItem={toEditItem}/>
             </div>
         </>
     )
