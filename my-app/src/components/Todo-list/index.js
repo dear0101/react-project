@@ -8,18 +8,18 @@ import {CheckSquareOutlined ,FormOutlined,ClearOutlined } from '@ant-design/icon
 import myMessage from '../../utils/message';
 function TodoList(props){
     const {todolist,toRemoveItem,toCompleted,toEditItem} = props;
-    let pageSize=7;
-    const [currentPage,setCurrentPage]=useState(1);  //默认当前页
+    let pageSize = 7;
+    const [currentPage,setCurrentPage] = useState(1);  //默认当前页
     
-    const [todoData,setTodoData]=useState([]);      
+    const [todoData,setTodoData] = useState([]);      
 
-    let [isShowModal,setShowModal]=useState(false), //默认查看模态框不显示
-        [isShowEditModal,setShowEditModal]=useState(false),  //默认编辑模态框不显示
-        [targetData,setTargetData]=useState({}),    //获取查看项
-        [targetEditData,setTargetEditData]=useState({});    //获取修改项
+    let [isShowModal,setShowModal] = useState(false), //默认查看模态框不显示
+        [isShowEditModal,setShowEditModal] = useState(false),  //默认编辑模态框不显示
+        [targetData,setTargetData] = useState({}),    //获取查看项
+        [targetEditData,setTargetEditData] = useState({});    //获取修改项
         
     //切换列表页
-    const onChangePage=(pages,pageSize)=>{
+    const onChangePage = (pages,pageSize)=>{
         setCurrentPage(pages)
     }  
 
@@ -41,7 +41,7 @@ function TodoList(props){
     },[])
 
     //确认修改
-    const handleOk= useCallback((newData,id)=>{
+    const handleOk = useCallback((newData,id)=>{
         toEditItem(newData,id)
         setShowEditModal(false);
         myMessage.success('修改成功!',2)

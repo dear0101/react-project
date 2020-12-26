@@ -3,12 +3,12 @@ import './index.scss';
 import TodoInput from '../../components/Todo-input';
 import TodoList from '../../components/Todo-list';
 function BikeMap(){
-    const [todolist,setTodolist]=useState([]); 
+    const [todolist,setTodolist] = useState([]); 
     useEffect(()=>{
         setTodolist(JSON.parse(localStorage.getItem('todolist')||'[]'));
     },[]) 
     //添加
-    const addItem=useCallback((value)=>{
+    const addItem = useCallback((value)=>{
         const dataItem = {
             id:new Date().getTime(),
             content:value,
@@ -18,13 +18,13 @@ function BikeMap(){
     },[])
 
     //删除
-    const toRemoveItem=useCallback((item)=>{
+    const toRemoveItem = useCallback((item)=>{
         console.log(item)
         setTodolist((todolist)=>todolist.filter(items=>items.id!==item.id))
     },[])
     
     //修改
-    const toEditItem=useCallback((newItem,id)=>{
+    const toEditItem = useCallback((newItem,id)=>{
         console.log(id)
         setTodolist((todolist)=>
         todolist.map(items=>{
@@ -35,7 +35,7 @@ function BikeMap(){
         }))
     },[])
     //是否完成
-    const toCompleted=useCallback((id)=>{
+    const toCompleted = useCallback((id)=>{
         setTodolist((todolist)=>
         todolist.map(item=>{
         if(item.id===id){

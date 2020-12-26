@@ -7,12 +7,14 @@ import myMessage from '../../../utils/message';
 const { TextArea } = Input;
 
 
-function MyEditModal(props){
-    const   {targetEditData, isShowEditModal,handleOk,close} =props,
-            editRef=useRef(),
-            checkRef=useRef();
+function MyEditModal (props){
+
+    const   {targetEditData, isShowEditModal,handleOk,close} = props,
+            editRef = useRef(),
+            checkRef = useRef();
+            
     //组装新数据     
-    const isOK=()=>{
+    const isOK = ()=>{
         let val = editRef.current.props.value.trim()
         console.log(val);
         console.log(checkRef.current.state.checked);
@@ -28,6 +30,7 @@ function MyEditModal(props){
         }
         handleOk(newData,targetEditData.id)
     }
+
     return (
         <>
             <Modal title="details" visible={isShowEditModal} onOk={isOK} onCancel={close}>
