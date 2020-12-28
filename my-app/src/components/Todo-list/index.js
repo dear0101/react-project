@@ -31,8 +31,10 @@ function TodoList(props){
     
     //修改模态框
     const handleEditChange = useCallback(item=>{
+        console.log(item)
         setTargetEditData(item)
         setShowEditModal(true);
+        console.log(targetEditData)
     },[])
 
     //关闭修改模态框
@@ -52,12 +54,15 @@ function TodoList(props){
         toRemoveItem(item)
         myMessage.success('删除成功!',2)
     },[])
+
     //是否完成
     const CheckChange = useCallback( (id)=>{
         toCompleted(id)
     },[])
+
     useEffect(() => {
         setTodoData(Util.pagination(todolist,pageSize,currentPage))
+        console.log(1)
     },[currentPage,todolist])
 
         return(
@@ -80,11 +85,10 @@ function TodoList(props){
                         }</List.Item>}
                 />
                     <div className="pagination">
-                        <Pagination defaultCurrent defaultPageSize={pageSize} defaultCurrent={1} total={todolist.length} onChange={ onChangePage}  />
+                        <Pagination defaultCurrent={1} defaultPageSize={pageSize}  total={todolist.length} onChange={ onChangePage}  />
                     </div>
                 </Card>
                 <MyModal targetData={targetData} isShowModal={isShowModal} handleOk={()=>setShowModal(false)}/>
-
                 <EditModal targetEditData={targetEditData} isShowEditModal={isShowEditModal}  close={close} handleOk={handleOk}/>
             </div>
             

@@ -3,7 +3,7 @@ import React from 'react';
 import { Modal } from 'antd';
 import Util from '../../../utils/utils';
 function MyModal(props){
-    const {targetData, isShowModal,handleOk,} =props;
+    const {targetData, isShowModal,handleOk,} = props;
     return (
         <>
             <Modal title="details" visible={isShowModal} onOk={handleOk} onCancel={handleOk}>

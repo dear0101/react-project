@@ -1,4 +1,4 @@
-import React ,{useRef}from 'react';
+import React ,{useRef,useEffect}from 'react';
 
 import { Modal,Input,Checkbox } from 'antd';
 import Util from '../../../utils/utils';
@@ -12,7 +12,9 @@ function MyEditModal (props){
     const   {targetEditData, isShowEditModal,handleOk,close} = props,
             editRef = useRef(),
             checkRef = useRef();
-            
+    useEffect(()=>{
+        console.log("111")
+    },[])      
     //组装新数据     
     const isOK = ()=>{
         let val = editRef.current.props.value.trim()

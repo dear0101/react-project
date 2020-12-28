@@ -19,13 +19,13 @@ function BikeMap(){
 
     //删除
     const toRemoveItem = useCallback((item)=>{
-        console.log(item)
+        // console.log(item)
         setTodolist((todolist)=>todolist.filter(items=>items.id!==item.id))
     },[])
     
     //修改
     const toEditItem = useCallback((newItem,id)=>{
-        console.log(id)
+        // console.log(id)
         setTodolist((todolist)=>
         todolist.map(items=>{
         if(items.id===id){
