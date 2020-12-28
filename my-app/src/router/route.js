@@ -5,22 +5,15 @@ function Routes (){
         menuList.map((item, index) => {
             if(item.children){
                 return(
-                    <>{
                         item.children.map((child, index) => {
                             return (
-                                <Route  path={child.key} component={child.component}></Route>
+                                <Route key={child.key} path={child.key} component={child.component}></Route>
                             )
                         })
-                    }</>
                 )
-               
             }else{
                 return (
-                   <>
-                   <Route  path={item.key} component={item.component}></Route>
-                   
-                   </> 
-                  
+                   <Route key={item.key} path={item.key} component={item.component}></Route>
                 )
             }
            

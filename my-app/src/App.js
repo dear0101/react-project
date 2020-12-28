@@ -5,7 +5,6 @@ import Footer from './components/Footer';
 import {BrowserRouter as Router,Redirect} from "react-router-dom";
 import NavLeft from './components/NavLeft';
 import Routes from './router/route';
-import Home from './pages/home';
 function App (){
         return (
             <Router>
@@ -24,7 +23,6 @@ function App (){
             </Row>
             </Router>
         )
-
 }
 
 export default App;

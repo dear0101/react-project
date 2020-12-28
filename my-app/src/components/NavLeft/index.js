@@ -14,8 +14,6 @@ function NavLeft() {
                 {
                         MenuConfig.map((item,index)=>{
                             return (
-                                <>
-                                    {
                                     item.children?
                                     <SubMenu key={index} title={item.title}>
                                         {item.children.map((item)=>{
@@ -27,8 +25,6 @@ function NavLeft() {
                                     :<Menu.Item key={index}>
                                         <Link to={item.key}>{item.title}</Link>
                                     </Menu.Item>
-                                    }
-                                </>
                             )
                         })
                     }
