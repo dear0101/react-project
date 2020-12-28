@@ -16,9 +16,14 @@ function Routes (){
                
             }else{
                 return (
-                    <Route  path={item.key} component={item.component}></Route>
+                   <>
+                   <Route  path={item.key} component={item.component}></Route>
+                   
+                   </> 
+                  
                 )
             }
+           
         })
     )
 }
