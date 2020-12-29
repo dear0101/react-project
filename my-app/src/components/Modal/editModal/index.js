@@ -13,7 +13,7 @@ function MyEditModal (props){
             editRef = useRef(),
             checkRef = useRef();
     useEffect(()=>{
-        console.log("111")
+        console.log(targetEditData)
     },[])      
     //组装新数据     
     const isOK = ()=>{
@@ -21,8 +21,8 @@ function MyEditModal (props){
         console.log(val);
         console.log(checkRef.current.state.checked);
         if(val.length===0){
-            editRef.current.props.value=targetEditData.content     
             myMessage.warning('数据未修改!',2)
+            close()
             return ;
         }
         const newData = {

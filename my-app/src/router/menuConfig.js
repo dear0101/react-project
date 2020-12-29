@@ -1,6 +1,15 @@
 import Home from "../pages/home";
-import Buttons from "../pages/ui/Buttons";
+import Buttons from "../pages/ui/button";
+import Popups from "../pages/ui/Popups";
+import Load from "../pages/ui/Load";
+import Tips from "../pages/ui/Tip";
+import Tabs from "../pages/ui/Tabs";
+import Mess from "../pages/ui/Mess";
+import Picture from "../pages/ui/Picture";
+import Swiper from "../pages/ui/Swiper";
 import Form from "../pages/form";
+import Login from "../pages/form/Login";
+import Register from "../pages/form/Register";
 import Table from "../pages/table";
 import Rich from "../pages/rich";
 import City from "../pages/city";
@@ -9,6 +18,7 @@ import User from "../pages/user";
 import BikeMap from "../pages/bikemap";
 import Charts from "../pages/charts";
 import Permission from "../pages/permission";
+
 
 const menuList = [{
         title: '首页',
@@ -20,42 +30,42 @@ const menuList = [{
         key: '/ui',
         children: [{
                 title: '按钮',
-                components: Buttons,
+                component: Buttons,
                 key: '/ui/buttons',
             },
             {
                 title: '弹框',
-                components: Buttons,
+                component: Popups,
                 key: '/ui/modals',
             },
             {
                 title: 'Loading',
-                component: Buttons,
+                component: Load,
                 key: '/ui/loadings',
             },
             {
                 title: '通知提醒',
-                component: Buttons,
+                component: Tips,
                 key: '/ui/notification',
             },
             {
                 title: '全局Message',
-                component: Buttons,
+                component: Mess,
                 key: '/ui/messages',
             },
             {
                 title: 'Tab页签',
-                component: Buttons,
+                component: Tabs,
                 key: '/ui/tabs',
             },
             {
                 title: '图片画廊',
-                component: Buttons,
+                component: Picture,
                 key: '/ui/gallery',
             },
             {
                 title: '轮播图',
-                component: Buttons,
+                component: Swiper,
                 key: '/ui/carousel',
             }
         ]
@@ -66,10 +76,12 @@ const menuList = [{
         key: '/form',
         children: [{
                 title: '登录',
+                component: Login,
                 key: '/form/login',
             },
             {
                 title: '注册',
+                component: Register,
                 key: '/form/reg',
             }
         ]

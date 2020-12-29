@@ -10,7 +10,7 @@ function Header(){
     useEffect(()=>{
         setInterval(()=>{
             setSysTime( Util.formateDate(new Date().getTime())) 
-        })
+        },1000)
     },[])
 
     return (

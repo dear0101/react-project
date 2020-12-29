@@ -6,9 +6,9 @@ function Routes (){
             if(item.children){
                 return(
                         item.children.map((child, index) => {
-                            return (
-                                <Route key={child.key} path={child.key} component={child.component}></Route>
-                            )
+                            return <Route key={index} path={child.key} render={() => {
+                                return <item.component ></item.component>
+                              }}></Route>
                         })
                 )
             }else{

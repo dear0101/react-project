@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {Card,Button,Radio} from 'antd'
-import './ui.scss';
+import './index.scss';
 import { RightOutlined,LeftOutlined,PlusSquareOutlined,SearchOutlined,EditOutlined,LoadingOutlined,VerticalAlignBottomOutlined } from '@ant-design/icons';
 function Buttons(){
     let [falg,setFalg]=useState(true);

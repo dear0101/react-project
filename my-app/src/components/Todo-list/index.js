@@ -62,9 +62,8 @@ function TodoList(props){
 
     useEffect(() => {
         setTodoData(Util.pagination(todolist,pageSize,currentPage))
-        console.log(1)
     },[currentPage,todolist])
-
+   
         return(
             <div className="todo">
                 <Card>
